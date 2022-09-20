@@ -42,3 +42,13 @@ console.log("\nOutput:");
 console.log(numOfRepetitions.length);
 console.log(numOfRepetitions.join(" "));
 
+// bonus task
+/* Arrange each distinct word in the input according to their occurrences in descending order. Also, print the most repeated word and the least repeated word. */
+console.log("\nBonus Output:");
+const uniqueWords = Object.keys(wordsObj);
+const descendingOrder = [...uniqueWords.sort((a, b) => wordsObj[b] - wordsObj[a])];
+
+console.log(`\nUnique words in descending order of occurrences: \n${descendingOrder.join(", ")}`);
+
+console.log(`\nMost repeated word: ${descendingOrder[0]}`);
+console.log(`Least repeated word: ${descendingOrder[uniqueWords.length - 1]}`);
