@@ -23,7 +23,7 @@ for (let i = 0; i < numOfWords; i++) {
 
 const wordsObj = {};
 
-const isRepeating = (word) => {
+const checkOccurrence = (word) => {
   if (wordsObj[word] === undefined) {
     wordsObj[word] = 1;
   }
@@ -32,7 +32,7 @@ const isRepeating = (word) => {
   }
 }
 
-wordsArr.forEach(word => isRepeating(word));
+wordsArr.forEach(word => checkOccurrence(word));
 
 // array having number of repetitions of each unique word (order of words same as order of input words)
 const numOfRepetitions = Object.values(wordsObj);
